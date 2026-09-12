@@ -59,4 +59,11 @@ class User extends Authenticatable
         return strtolower($this->role?->name ?? '') === strtolower($roleName);
     }
 
+
+    // Each candidate can have one user id 
+    public function candidate()
+    {
+        return $this->hasOne(Candidate::class);
+    }
+
 }

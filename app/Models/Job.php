@@ -27,4 +27,10 @@ class Job extends Model
     {
         return $this->belongsTo(User::class, 'created_by');
     }
+
+    // Get all applications submitted for this job.
+    public function applications()
+    {
+        return $this->hasMany(Application::class, 'job_id');
+    }
 }
