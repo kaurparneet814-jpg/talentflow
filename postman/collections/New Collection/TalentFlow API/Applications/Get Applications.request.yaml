@@ -1,0 +1,10 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/applications
+method: GET
+headers:
+  Authorization: Bearer 1|Ijx2jYeTQg9cRatz6B0VBqDxRi2OpSOHS9PGQPKvb79cf134
+  Accept: application/json
+auth:
+  type: noauth
+order: 3659616001652595

@@ -1,0 +1,22 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/jobs/1
+method: PUT
+headers:
+  Authorization: Bearer {{recruiter_token}}
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"Senior Laravel Developer\",\r
+
+    \    \"salary_min\": 40000,\r
+
+    \    \"salary_max\": 90000.00,\r
+
+    \    \"status\": \"active\"\r
+
+    }"
+order: 4058499255687721

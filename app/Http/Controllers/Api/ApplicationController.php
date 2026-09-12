@@ -10,7 +10,7 @@ use App\Models\ApplicationStatusHistory;
 use App\Models\Job;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\UpdateApplicationStatusRequest;
-
+use App\Http\Resources\ApplicationResource;
 
 class ApplicationController extends Controller
 {
@@ -35,7 +35,7 @@ class ApplicationController extends Controller
 
         return response()->json([
             'message' => 'Applications fetched successfully.',
-            'applications' => $applications
+            'applications' => ApplicationResource::collection($applications),
         ], 200);
     }
 
@@ -107,7 +107,7 @@ class ApplicationController extends Controller
 
         return response()->json([
             'message' => 'Application submitted successfully.',
-            'application' => $application,
+            'application' => new ApplicationResource($application),
         ], 201);
     }
 
@@ -142,14 +142,7 @@ class ApplicationController extends Controller
 
         return response()->json([
             'message' => 'Application status updated successfully.',
-            'application' => $application,
+            'application' => new ApplicationResource($application),
         ], 200);
     }
-
-    // Technical tasks assigned for this application.
-    public function technicalTasks()
-    {
-        return $this->hasMany(TechnicalTask::class);
-    }
-
 }

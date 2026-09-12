@@ -8,7 +8,7 @@ use App\Http\Requests\StoreJobRequest;
 use App\Http\Requests\UpdateJobRequest;
 use App\Models\Job;
 use App\Models\User;
-
+use App\Http\Resources\JobResource;
 
 class JobController extends Controller
 {
@@ -33,7 +33,7 @@ class JobController extends Controller
 
         return response()->json([
             'message' => 'Job created successfully',
-            'job' => $job,
+            'job' => new JobResource($job),
         ], 201);
     }
 

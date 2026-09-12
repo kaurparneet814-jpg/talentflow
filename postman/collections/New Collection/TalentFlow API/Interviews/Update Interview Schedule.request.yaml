@@ -1,0 +1,20 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/interviews/1
+method: PUT
+headers:
+  Authorization: Bearer {{recruiter_token}}
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \    \"scheduled_at\": \"2026-09-16 14:00:00\",\r
+
+    \    \"meeting_link\": \"https://meet.google.com/new-meeting\",\r
+
+    \    \"status\": \"scheduled\"\r
+
+    }"
+order: 2316876420074277

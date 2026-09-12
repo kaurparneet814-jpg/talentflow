@@ -1,0 +1,16 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/resumes
+method: POST
+headers:
+  Authorization: Bearer {{Candidate_token}}
+body:
+  type: formdata
+  content:
+    - type: file
+      key: resume
+      src:
+        - {{resume.pdf}}
+      description: ""
+      disabled: false
+order: 1789234265859

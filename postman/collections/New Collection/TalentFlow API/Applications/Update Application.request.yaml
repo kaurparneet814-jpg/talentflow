@@ -1,0 +1,15 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/applications/1/status
+method: PUT
+headers:
+  Accept: application/json
+  Authorization: Bearer 1|Ijx2jYeTQg9cRatz6B0VBqDxRi2OpSOHS9PGQPKvb79cf134
+body:
+  type: json
+  content: "{\r
+
+    \    \"status\": \"screening\"\r
+
+    }"
+order: 3801992668099506

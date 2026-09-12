@@ -1,0 +1,8 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/jobs/2
+method: DELETE
+headers:
+  Authorization: Bearer {{recruiter_token}}
+  Accept: application/json
+order: 4468602748072949

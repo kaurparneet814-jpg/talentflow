@@ -1,0 +1,28 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/jobs
+method: POST
+headers:
+  Authorization: Bearer {{recruiter_token}}
+body:
+  type: json
+  content: "{\r
+
+    \    \"title\": \"Laravel Developer New\",\r
+
+    \    \"department\": \"Engineering Test\",\r
+
+    \    \"description\": \"Looking for an experienced Laravel developer. Test\",\r
+
+    \    \"experience_required\": 3,\r
+
+    \    \"salary_min\": 30000,\r
+
+    \    \"salary_max\": 60000,\r
+
+    \    \"application_deadline\": \"2026-09-30\",\r
+
+    \    \"status\": \"active\"\r
+
+    }"
+order: 1789232605253

@@ -1,0 +1,12 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/interviews
+method: GET
+headers:
+  Authorization: Bearer {{recruiter_token}}
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: ""
+order: 1529321071073371

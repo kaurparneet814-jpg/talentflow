@@ -1,0 +1,7 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/dashboard
+method: GET
+headers:
+  Authorization: {{recruiter_token}}
+order: 1789234175910

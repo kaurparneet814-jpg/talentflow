@@ -1,0 +1,10 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/api/jobs/1/apply
+method: POST
+headers:
+  Authorization: Bearer 2|WECD3eHKCGAwetBvJ7bfq06RmwE4PLP8iHKTGwLL22d68ae5
+body:
+  type: json
+  content: "{\r\n    \"resume_id\": 1\r\n}"
+order: 1789233022404

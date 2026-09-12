@@ -45,5 +45,11 @@ class Application extends Model
         return $this->hasMany(Interview::class);
     }
 
+    // Technical tasks assigned for this application.
+    public function technicalTasks()
+    {
+        return $this->hasMany(TechnicalTask::class);
+    }
+    
 
 }
